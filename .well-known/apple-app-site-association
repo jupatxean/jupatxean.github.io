@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["SFPWYKMJH5.com.jupatxean.jupatxean"],
+        "components": [
+          { "/": "/duo/*", "comment": "Duo invites: /duo/?c=A1B2C3D4" }
+        ]
+      }
+    ]
+  }
+}
