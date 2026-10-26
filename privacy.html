@@ -53,15 +53,15 @@ footer { margin-top: 4rem; padding-top: 1.4rem;
 <body>
 <main>
 <h1>JupaFit — Privacy Policy</h1>
-<p><strong>Last updated: 3 October 2026</strong></p>
+<p><strong>Last updated: 27 October 2026</strong></p>
 <hr>
 <h2>The short version</h2>
 <p>JupaFit is a fitness app. To work, it needs to know some things about your body and what you eat, so it asks you and it remembers the answers.</p>
 <ul>
 <li><strong>We do not sell your data.</strong> Not to anyone, for any price, ever.</li>
 <li><strong>There are no ads in JupaFit</strong>, so there is no advertising identifier and nothing to target.</li>
-<li><strong>Nothing goes to an AI service without your permission.</strong> Meal Scan and Jupa, the coach, are answered by <strong>OpenAI</strong>. Before either sends anything, the app tells you what will be sent and asks you. You can withdraw that permission at any time in Profile → Privacy &amp; data.</li>
-<li><strong>Your conversations with Jupa are stored on your phone only</strong>, never on our servers. To answer a message, it is sent to OpenAI — see 2.5.</li>
+<li><strong>Nothing goes to an AI service without your permission.</strong> Meal Scan is answered by <strong>OpenAI</strong>. Before it sends anything, the app tells you what will be sent and asks you. You can withdraw that permission at any time in Profile → Privacy &amp; data.</li>
+<li><strong>Duo photos are seen by two people: you and your Duo.</strong> Nothing in JupaFit is public — there is no feed of strangers, no profile anyone can look up. Hide a post and its photos are deleted; delete your account and all of yours are.</li>
 <li><strong>Meal photographs are not kept.</strong> A photo is sent to be analysed and discarded in the same request; it is never written to storage or a log.</li>
 <li><strong>Health data never leaves your phone.</strong> JupaFit reads your step count and sleep, uses them on the device, uploads neither, and never writes anything back to Apple Health or Health Connect.</li>
 <li><strong>You can delete your account from inside the app</strong>, in Profile → Delete account (also at the bottom of Privacy &amp; data), and it deletes on the server too.</li>
@@ -150,8 +150,12 @@ footer { margin-top: 4rem; padding-top: 1.4rem;
 <td><strong>Phone only</strong></td>
 </tr>
 <tr>
-<td>Your conversation with Jupa</td>
-<td><strong>Phone only</strong></td>
+<td>Programs you build</td>
+<td>Phone <strong>and</strong> account (and your Duo, if you share one — see 2.5)</td>
+</tr>
+<tr>
+<td>Duo posts, reactions, the weekly pact</td>
+<td>Account, <strong>shared with your Duo</strong> — see 2.5</td>
 </tr>
 <tr>
 <td>Today's in-progress state</td>
@@ -177,20 +181,31 @@ footer { margin-top: 4rem; padding-top: 1.4rem;
 <p>If you photograph a meal, the picture is sent to our server and on to our AI provider to estimate the food and its nutrition. <strong>The image is not stored.</strong> It exists for the length of one request and is never written to storage or to any log. What is kept is the <em>result</em> — the food name and its nutrition numbers — as an entry in your food log.</p>
 <p><strong>Before the first photo is sent, the app asks your permission</strong>, and says that the photo goes to OpenAI and what it is used for. Until you allow it, nothing is sent and the camera does not open for scanning.</p>
 <p>You can use the whole food log without ever taking a photograph, by searching or entering food by hand.</p>
-<h3>2.5 Your conversation with the coach</h3>
-<p>The coach ("Jupa") is an AI feature. Two things happen when you send a message, and they are different from each other:</p>
+<h3>2.5 Duo — training with one other person</h3>
+<p>Duo connects your account to <strong>one</strong> other person you invite: a partner or a gym buddy. What you put into a Duo is seen by the two of you and by nobody else — not other users, not the public.</p>
+<p><strong>What your Duo sees about you:</strong></p>
 <ul>
-<li><strong>Storage.</strong> The conversation is saved <strong>on your phone only</strong>, under a key scoped to your account so that two people using one handset cannot read each other's. It is never uploaded, never backed up to our database, and it goes when you sign out or delete the app.</li>
-<li><strong>Processing.</strong> To answer, the message and the recent conversation are sent to our AI provider, together with a short summary of your training context so the answer is about you rather than generic. That summary can contain: your weight, your height, your goal, your daily calorie and protein targets, your recent workouts, and the free-text answers you gave about your build and what you find difficult.</li>
+<li>the name you gave the app;</li>
+<li>the workout posts you send: one or two photos (if you take or choose any), the workout card the app fills in (session name, minutes, kilos moved, personal records), your mood that day and an optional caption;</li>
+<li>your reactions to their posts;</li>
+<li>the weekly pact you agree — how many days each of you trains, and the stake — and, from your posts, how many days you have done, your weekly kilos, and the shared streak or scoreboard;</li>
+<li>programs you choose to share with them.</li>
 </ul>
-<p>It does <strong>not</strong> contain your name, your email address, your date of birth, or any health data read from Apple Health or Health Connect.</p>
-<p><strong>Before your first message is sent, the app asks your permission</strong>, naming OpenAI and listing what is sent, as above. If you decline, nothing is sent and the rest of the app is unaffected. You can withdraw permission at any time in Profile → Privacy &amp; data, and from then on nothing more is sent.</p>
-<h3>2.6 Account and sign-in</h3>
+<p>They do <strong>not</strong> see your body measurements, weight, food log, calorie target, health data, email address or anything else in your account.</p>
+<p><strong>Where it is kept.</strong> Posts, reactions and the pact are stored in our database; photos are stored in a private storage area that only the two members of that Duo can read. They are not sent to OpenAI or any other AI service.</p>
+<p><strong>Hiding a post.</strong> You can delete any post of your own. It disappears from both phones at once, and its photos are deleted from storage within a few hours.</p>
+<p><strong>Ending a Duo.</strong> Either of you can end it at any time. Nothing new is shared after that. Posts already shared are kept as the history of that Duo, readable only by its two members, until the author hides them or deletes their account.</p>
+<p><strong>Invite links.</strong> An invite is a short code, sent as a link (<code>jupatxean.github.io/duo/?c=…</code>) by whatever app <em>you</em> choose to share it with. The code works once and expires after 48 hours. The page behind the link is a static page: it collects nothing and only opens JupaFit.</p>
+<h3>2.6 Notifications</h3>
+<p>If you allow notifications, your phone gives JupaFit a <strong>push token</strong> — an address that lets Apple deliver a notification to this app on this phone. We store it with your account, together with your time-zone offset from UTC, so that notifications arrive at a sensible local hour.</p>
+<p>They are used only for Duo: your Duo posted, reacted, or joined; an evening reminder when your Duo has trained today and you have not; and the result of the weekly pact. There is no marketing notification.</p>
+<p>The text of each notification passes through <strong>Apple Push Notification service</strong> to reach your phone. Queued notifications are deleted after seven days. The token is removed when you sign out or delete your account, and you can turn notifications off at any time in your phone's settings.</p>
+<h3>2.7 Account and sign-in</h3>
 <p>You sign in with Apple, with Google, or with an email address and password. We receive an account identifier and an email address from whichever you choose. If you use Sign in with Apple and choose to hide your email, we receive Apple's relay address and never see your real one.</p>
 <p>We never see and never store your password for Apple or Google.</p>
-<h3>2.7 Subscriptions</h3>
+<h3>2.8 Subscriptions</h3>
 <p>If you subscribe, the payment is taken by <strong>Apple</strong> or <strong>Google</strong>, not by us. We never see your card number, and we could not charge it if we wanted to. We receive from the store only whether a subscription is active, which plan, and when the period ends.</p>
-<h3>2.8 Crash reports</h3>
+<h3>2.9 Crash reports</h3>
 <p>When the app crashes we receive a technical report — what went wrong, where in the code, the device model, and the OS version. It is deliberately configured to carry as little as possible: personal information is switched off, no screenshot is captured, no view hierarchy is captured, and log lines are stripped before sending. The report is linked to an anonymous account identifier so that repeated crashes for one person can be recognised as one problem.</p>
 <hr>
 <h2>3. Who else sees it</h2>
@@ -203,18 +218,28 @@ footer { margin-top: 4rem; padding-top: 1.4rem;
 </tr></thead><tbody>
 <tr>
 <td><strong>Supabase</strong></td>
-<td>Your account, and everything in the "account" column above</td>
-<td>Database, sign-in and backup</td>
+<td>Your account, everything in the "account" column above, Duo photos, push tokens</td>
+<td>Database, storage, sign-in and backup</td>
 </tr>
 <tr>
 <td><strong>OpenAI</strong></td>
-<td>Meal photographs at the moment of analysis; coach messages and the training summary in 2.5</td>
-<td>The AI features</td>
+<td>Meal photographs at the moment of analysis</td>
+<td>Meal Scan</td>
 </tr>
 <tr>
 <td><strong>Apple</strong> / <strong>Google</strong></td>
 <td>Sign-in identity; subscription status</td>
 <td>Sign-in and payment</td>
+</tr>
+<tr>
+<td><strong>Apple Push Notification service</strong></td>
+<td>Your push token and the text of each notification (2.6)</td>
+<td>Delivering notifications</td>
+</tr>
+<tr>
+<td><strong>GitHub Pages</strong></td>
+<td>The ordinary request (IP address, browser) when someone opens an invite link or this page</td>
+<td>Hosting those pages</td>
 </tr>
 <tr>
 <td><strong>RevenueCat</strong></td>
@@ -223,11 +248,11 @@ footer { margin-top: 4rem; padding-top: 1.4rem;
 </tr>
 <tr>
 <td><strong>Sentry</strong></td>
-<td>Crash reports as described in 2.8</td>
+<td>Crash reports as described in 2.9</td>
 <td>Fixing crashes</td>
 </tr>
 </tbody></table></div>
-<p><strong>OpenAI and the AI features.</strong> Data reaches OpenAI only after you have allowed it in the app, and only what is listed in 2.4 and 2.5. We use OpenAI through its business API, under terms that require it to give this data protection at least equal to this policy: it processes the data only to produce the answer for us, it does not use API data to train its models, and it is bound by its data processing terms. Your name, email address, date of birth and health data are never sent to it.</p>
+<p><strong>OpenAI and Meal Scan.</strong> Data reaches OpenAI only after you have allowed it in the app, and only the meal photo described in 2.4. We use OpenAI through its business API, under terms that require it to give this data protection at least equal to this policy: it processes the data only to produce the answer for us, it does not use API data to train its models, and it is bound by its data processing terms. Your name, email address, date of birth, health data and Duo photos are never sent to it.</p>
 <p><strong>We do not sell personal data, and we do not share it for advertising.</strong> There is no advertising network, no analytics broker, and no data broker of any kind in this app.</p>
 <h3>International transfers</h3>
 <p>These providers operate servers outside the country you are in, so using JupaFit involves transferring your data internationally. Where the law requires a safeguard for that transfer — for example the EU's standard contractual clauses — we rely on the terms each provider offers for it.</p>
@@ -238,7 +263,7 @@ footer { margin-top: 4rem; padding-top: 1.4rem;
 <li><strong>Your location.</strong> Not once, for any reason. The app requests no location permission of any kind.</li>
 <li><strong>Advertising identifiers.</strong> There are no ads.</li>
 <li><strong>Your contacts, your calendar, your microphone.</strong></li>
-<li><strong>Photographs other than the meal you choose to send.</strong> The app can read the one picture you pick; it cannot see your photo library.</li>
+<li><strong>Photographs other than the ones you take or pick yourself</strong> — a meal for Meal Scan, a workout photo for your Duo, or a picture for your streak card. The app can read the one picture you pick; it cannot browse your photo library.</li>
 <li><strong>Screenshots of your screens</strong>, including when the app crashes.</li>
 </ul>
 <hr>
@@ -247,13 +272,17 @@ footer { margin-top: 4rem; padding-top: 1.4rem;
 <li><strong>On your phone</strong>: until you sign out or delete the app, both of which clear it.</li>
 <li><strong>On your account</strong>: until you delete your account.</li>
 <li><strong>Meal photographs</strong>: not kept at all.</li>
+<li><strong>Duo posts and photos</strong>: until the author hides the post or deletes their account. A hidden post's photos are deleted within a few hours.</li>
+<li><strong>Duo invites</strong>: a code stops working after 48 hours or one use.</li>
+<li><strong>Push tokens</strong>: until you sign out or delete your account; queued notifications are deleted after seven days.</li>
 <li><strong>Crash reports</strong>: retained by Sentry on its default schedule and then deleted.</li>
 </ul>
 <p>We do not keep an archive of deleted accounts.</p>
 <hr>
 <h2>6. Deleting everything</h2>
 <p>Open <strong>Profile → Delete account</strong> (the same option is also at the bottom of <strong>Profile → Privacy &amp; data</strong>).</p>
-<p>This deletes your row and everything that references it — your questionnaire, your weigh-ins and measurements, your food log and favourites, your workouts, your progression, your sleep record, and your subscription record — and then clears the copy on the handset. It is immediate and it cannot be undone.</p>
+<p>This deletes your row and everything that references it — your questionnaire, your weigh-ins and measurements, your food log and favourites, your workouts, your programs, your progression, your sleep record, your Duo posts, reactions and invites, your push tokens, and your subscription record — and then clears the copy on the handset. The photos of those posts are removed from storage within a few hours. It is immediate and it cannot be undone.</p>
+<p>A Duo you started — by sending the invite — is deleted with your account, together with its shared history, including your partner's posts in it. Your partner's own account is not affected.</p>
 <p>Deleting your account does not cancel a subscription bought through Apple or Google. Cancel that in your App Store or Play Store account settings, or it will keep renewing.</p>
 <p>You can also just sign out, which clears the phone and leaves the account intact.</p>
 <hr>
