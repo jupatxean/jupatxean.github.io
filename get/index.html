@@ -3,48 +3,60 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>JupaFit — Train together. Even apart.</title>
-<meta name="description" content="JupaFit: the workout app for couples and gym buddies. Free on the App Store.">
-<meta property="og:title" content="JupaFit — Train together. Even apart.">
-<meta property="og:description" content="The workout app for couples and gym buddies. Free on the App Store.">
+<title>JupaFit — The workout app for two</title>
+<meta name="description" content="JupaFit: the workout app for couples and gym buddies. Post a photo after every workout, keep score, loser buys dinner.">
+<meta property="og:title" content="JupaFit — The workout app for two">
+<meta property="og:description" content="Couples and gym buddies keep each other going. Free on the App Store.">
 <style>
 :root { color-scheme: dark; }
 * { box-sizing: border-box; }
 body {
   margin: 0; min-height: 100vh; display: flex; align-items: center;
-  justify-content: center; padding: 2rem 1.25rem; text-align: center;
+  justify-content: center; padding: 2.5rem 1.25rem; text-align: center;
   font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
   color: #f4f0fb;
-  background: radial-gradient(circle at 50% 30%, #3a1880 0%, #0a0612 70%);
+  background: radial-gradient(circle at 50% 25%, #3a1880 0%, #0a0612 70%);
 }
-main { max-width: 24rem; }
-h1 { font-size: 2.2rem; letter-spacing: -.03em; margin: .2rem 0 .4rem; }
+main { max-width: 25rem; width: 100%; }
+img.icon { width: 84px; height: 84px; border-radius: 20px; box-shadow: 0 0 30px #8b5cf680; }
+h1 { font-size: 2.3rem; line-height: 1.15; letter-spacing: -.03em; margin: 1rem 0 .5rem; }
 h1 span { color: #c9a6ff; text-shadow: 0 0 18px #8b5cf6; }
-p { color: #d6d0e4; margin: 0 0 1.8rem; }
+p.lead { color: #d6d0e4; margin: 0 0 1.6rem; }
+ul { list-style: none; padding: 0; margin: 0 0 2rem; text-align: left; }
+li { background: #ffffff0d; border: 1px solid #ffffff1a; border-radius: 14px;
+     padding: .8rem 1rem; margin-bottom: .6rem; }
+li b { color: #fff; }
 a.btn {
   display: inline-block; background: #fff; color: #111; font-weight: 700;
-  padding: .9rem 1.8rem; border-radius: 999px; text-decoration: none;
+  padding: .95rem 1.9rem; border-radius: 999px; text-decoration: none; font-size: 1.05rem;
 }
-small { display: block; margin-top: 1.4rem; color: #8f86a3; }
+small { display: block; margin-top: 1.2rem; color: #8f86a3; }
 </style>
 </head>
 <body>
 <main>
+  <img class="icon" src="/assets/icon.png" alt="JupaFit icon" onerror="this.remove()">
   <h1>The workout app <span>for two.</span></h1>
-  <p>Couples &amp; gym buddies · a photo after every workout · loser buys dinner.</p>
-  <a class="btn" id="go" href="https://apps.apple.com/app/apple-store/id6816104437?pt=129511199&amp;ct=web_get&amp;mt=8">Download free on the App Store</a>
-  <small>Opening the App Store…</small>
+  <p class="lead">For couples and gym buddies who keep each other going.</p>
+  <ul>
+    <li>📸 <b>Proof photo</b> after every workout, sent to your partner</li>
+    <li>🏆 <b>Keep score</b> all week. Loser buys dinner</li>
+    <li>🔥 <b>React and push</b> each other, even when you train apart</li>
+  </ul>
+  <a class="btn" id="go" href="https://apps.apple.com/app/apple-store/id6816104437?pt=129511199&amp;ct=web_get&amp;mt=8">Download on the App Store</a>
+  <small>Free to download · iPhone</small>
 </main>
 <script>
-// Ads link here as /get/?ct=<campaign>; forward to the App Store with the
-// same campaign token so App Store Connect can attribute the install.
+// Ads link here as /get/?ct=<campaign>. The button carries the same token on
+// to the App Store so App Store Connect can attribute the install.
+// No automatic redirect: Meta treats a page that bounces straight to the App
+// Store as an app link, which a Traffic campaign may not use.
 (function () {
   var q = new URLSearchParams(location.search);
   var ct = (q.get("ct") || "web_get").replace(/[^A-Za-z0-9_\-]/g, "").slice(0, 40);
-  var url = "https://apps.apple.com/app/apple-store/id6816104437?pt=129511199&ct=" +
-            encodeURIComponent(ct) + "&mt=8";
-  document.getElementById("go").href = url;
-  setTimeout(function () { location.replace(url); }, 400);
+  document.getElementById("go").href =
+    "https://apps.apple.com/app/apple-store/id6816104437?pt=129511199&ct=" +
+    encodeURIComponent(ct) + "&mt=8";
 })();
 </script>
 </body>
